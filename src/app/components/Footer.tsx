@@ -15,15 +15,15 @@ export function Footer() {
               Egypt's premier digital platform for desert exploration, eco-tourism, and immersive travel experiences
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <Link to="/community" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              </Link>
+              <Link to="/community" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              </Link>
+              <Link to="/community" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -62,19 +62,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/travel-stories" className="text-white/70 hover:text-white transition-colors">
                   Travel Tips
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/faqs" className="text-white/70 hover:text-white transition-colors">
                   Best Times to Visit
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/emergency-help" className="text-white/70 hover:text-white transition-colors">
                   Safety Guide
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,9 +84,9 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-white/70">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:hello@desertia.com" className="hover:text-white transition-colors">
+                <Link to="/contact" className="hover:text-white transition-colors">
                   hello@desertia.com
-                </a>
+                </Link>
               </li>
               <li className="flex items-center gap-2 text-white/70">
                 <Phone className="w-4 h-4" />
@@ -106,15 +106,15 @@ export function Footer() {
               © 2026 Desertia. All rights reserved. Crafted with passion for desert exploration.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              </Link>
+              <Link to="/terms" className="text-white/60 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              </Link>
+              <Link to="/privacy" className="text-white/60 hover:text-white transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

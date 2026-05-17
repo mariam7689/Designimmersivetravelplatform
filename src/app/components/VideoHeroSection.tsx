@@ -86,46 +86,28 @@ export function VideoHeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1D2A] via-[#1A2F3D] to-[#4A3B2A]">
-          <motion.div
-            className="absolute inset-0 opacity-40"
-            animate={{
-              backgroundPosition: ["0% 0%", "100% 100%"],
-            }}
-            transition={{
-              duration: 60,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            style={{
-              backgroundImage: `
-                radial-gradient(circle at 20% 50%, rgba(216, 179, 106, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(193, 124, 84, 0.1) 0%, transparent 50%)
-              `,
-              backgroundSize: "200% 200%",
-            }}
-          />
+    <section className="relative h-screen overflow-hidden bg-black">
+      <div className="absolute inset-0 z-0">
+        {/* Cinematic Ken Burns Effect Backgrounds */}
+        <motion.div
+          animate={{ scale: [1.05, 1.15, 1.05], opacity: [1, 0, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553983658-0d7afeb5c53f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBzYWhhcmElMjBkZXNlcnQlMjBjYW1lbHxlbnwxfHx8fDE3NzkwMzMyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080')" }}
+        />
+        <motion.div
+          animate={{ scale: [1.15, 1.05, 1.15], opacity: [0, 1, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 10 }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1763535743600-e9fd458d6ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBzYW5kc3Rvcm0lMjBzYWZhcmklMjA0eDR8ZW58MXx8fHwxNzc5MDMzMjczfDA&ixlib=rb-4.1.0&q=80&w=1080')" }}
+        />
 
-          <motion.div
-            className="absolute bottom-0 left-0 right-0 h-1/3"
-            animate={{
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-            }}
-            style={{
-              background: "radial-gradient(ellipse at bottom, rgba(216, 179, 106, 0.2) 0%, transparent 70%)",
-            }}
-          />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1D2A]/70 via-[#1A2F3D]/50 to-[#4A3B2A]/70 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-black/40" />
 
-        <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none opacity-60" />
+        <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none opacity-80" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90" />
 
         <motion.div
           className="absolute inset-0"

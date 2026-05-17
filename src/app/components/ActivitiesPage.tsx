@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Clock, DollarSign, TrendingUp } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -170,9 +171,9 @@ export function ActivitiesPage() {
                   </div>
                 </div>
 
-                <button className="w-full py-3 bg-[var(--desert-gold)] text-[var(--dark-brown)] rounded-xl hover:scale-105 transition-transform">
+                <Link to="/checkout" className="block text-center w-full py-3 bg-[var(--desert-gold)] text-[var(--dark-brown)] rounded-xl hover:scale-105 transition-transform font-medium shadow-md">
                   Book Now
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
